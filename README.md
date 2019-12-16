@@ -1,5 +1,7 @@
 # Makers Tech Tests
 
+A selection of tech tests done during the individual tech tests week of Makers
+
 ## Bank Test
 
   Created a small REPL app which creates a bank account with the ability to deposit and withdraw cash, storing the credit, debit, and balance of the account, and prints a full statement of all transactions in a specific format as follows:
