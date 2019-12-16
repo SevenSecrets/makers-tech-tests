@@ -21,28 +21,37 @@ Methods on the statement are gonna be: deposit, withdrawal, print(?)
 
 
 Account:
-Deposits:
-Stores an amount (integer) and records the date on which it happened
+  Deposits:
+    Stores an amount (integer) and records the date on which it happened
 
-Withdrawals:
-Removes an amount (int) and records the date on which it happened
+  Withdrawals:
+    Removes an amount (int) and records the date on which it happened
 
-Account Statement:
-Prints the data from statement
+  Account Statement:
+    Prints the data from statement
 
 Statement:
-Deposits:
-Takes the data from account deposit and stores it (ignoring debit)
+  Deposits:
+    Takes the data from account deposit and stores it (ignoring debit)
 
-Withdrawals:
-Takes the data from account and stores it (ignoring credit)
+  Withdrawals:
+    Takes the data from account and stores it (ignoring credit)
 
-Print:
-Returns the stored data for each action on account (date, credit, debit, balance) in a readable format, most recent first
-
+  Print:
+    Returns the stored data for each action on account (date, credit, debit, balance) in a readable format, most recent first
 
 Am I gonna need more than one object?
 Perhaps the account statement will need to be a separate object?
+YES
 ```
 
 ##Usage
+
+**all in IRB with account class required**
+
+1. create a new account using: `account_name = Account.new`
+2. deposit money using: `account_name.deposit(amount_to_deposit)`
+3. withdraw money using: `account_name.withdraw(amount_to_withdraw)`
+4. money can be withdrawn below a balance of 0
+5. return statement using `account_name.print_statement`
+6. there is no need to create a statement object as one is initialised when a new account object is created, but you can pass a pre-existing one by running `Account.new(already_existing_statement)` and it will be used
