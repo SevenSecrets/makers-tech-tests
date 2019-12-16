@@ -16,7 +16,7 @@ class Statement
     @statement_list << transaction_data
   end
 
-  def print_statement
+  def return_statement
     @statement_list
   end
 end
