@@ -15,7 +15,12 @@ class Statement
     @transaction_list << transaction_data
   end
 
-  def return_statement
-    @transaction_list
+  def print_statement
+    statement_to_return = @transaction_list.map { |arr|
+      arr.join(" ")
+    }
+    statement_to_return << "date || credit || debit || balance"
+    statement_to_return.reverse!
+    return statement_to_return.join("\n")
   end
 end

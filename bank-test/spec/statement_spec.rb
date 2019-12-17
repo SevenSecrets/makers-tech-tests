@@ -18,6 +18,6 @@ describe Statement do
     statement = Statement.new
     statement.deposit(1, 1)
     statement.withdraw(1, 0)
-    expect(statement.return_statement).to eq([[date_today, "||", 1, "||", "", "||", 1], [date_today, "||", "", "||", 1, "||", 0]])
+    expect(statement.print_statement).to eq "date || credit || debit || balance\n#{date_today} ||  || 1 || 0\n#{date_today} || 1 ||  || 1"
   end
 end

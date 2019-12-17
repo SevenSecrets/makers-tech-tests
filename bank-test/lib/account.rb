@@ -25,11 +25,6 @@ class Account
   end
 
   def print_statement
-    statement_to_return = @statement.return_statement.map { |arr|
-      arr.join(" ")
-    }
-    statement_to_return << "date || credit || debit || balance"
-    statement_to_return.reverse!
-    return statement_to_return.join("\n")
+    @statement.print_statement
   end
 end
