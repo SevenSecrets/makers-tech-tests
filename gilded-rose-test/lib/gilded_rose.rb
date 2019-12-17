@@ -13,9 +13,9 @@ class GildedRose
   def item_check_and_increment(item)
     if item.name != "Sulfuras, Hand of Ragnaros"                                #does nothing if legendary
       if item.name == "Aged Brie"                                               #does brie stuff if brie
-        aged_brie_update(item)
+        aged_brie_quality_update(item)
       elsif item.name == "Backstage passes to a TAFKAL80ETC concert"            #does backstage stuff
-        backstage_passes_update(item)
+        backstage_passes_quality_update(item)
       else
         if item.quality > 0
           item.quality -= 1                                                     #reduces quality by 1
@@ -30,13 +30,13 @@ class GildedRose
     item.sell_in -= 1
   end
 
-  def aged_brie_update(item)
+  def aged_brie_quality_update(item)
     if item.quality < 50                                                        #quality can't be over 50
       item.quality += 1
     end
   end
 
-  def backstage_passes_update(item)
+  def backstage_passes_quality_update(item)
     if item.quality < 50 && item.sell_in > 0
       if item.sell_in > 5
         if item.sell_in > 10
