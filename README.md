@@ -1,6 +1,8 @@
 # Makers Tech Tests
 
-A selection of tech tests done during the individual tech tests week of Makers
+A selection of tech tests done during the individual tech tests week of Makers.
+
+Each test has its own README also contained within its directory.
 
 ## Bank Test
 
