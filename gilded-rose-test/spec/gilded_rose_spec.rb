@@ -3,6 +3,12 @@ require 'gilded_rose'
 describe GildedRose do
 
   describe "#update_quality" do
+    it "reduces sell_in by one each day" do
+      items= [Item.new("foo", 1, 1)]
+      GildedRose.new(items).update_quality
+      expect(items[0].sell_in).to eq 0
+    end
+
     it "reduces the quality after a day" do
       items = [Item.new("foo", 0, 1)]
       GildedRose.new(items).update_quality
@@ -30,7 +36,7 @@ describe GildedRose do
     it "increases the quality of Aged Brie" do
       items = [Item.new("Aged Brie", 1, 1)]
       GildedRose.new(items).update_quality
-      expect(items[0].quality).to be 2
+      expect(items[0].quality).to eq 2
     end
 
     it "doesn't increase quality past 50" do
