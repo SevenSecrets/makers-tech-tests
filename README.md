@@ -14,3 +14,7 @@ Each test has its own README also contained within its directory.
 10/01/2012 || 1000.00 || || 1000.00
 ```
 ***COMPLETED***
+
+## Gilded Rose Test
+
+  Refactor challenge, which can be read about [here](https://github.com/makersacademy/course/blob/master/individual_challenges/gilded_rose.md)
