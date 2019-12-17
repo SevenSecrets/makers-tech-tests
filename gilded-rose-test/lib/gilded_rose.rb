@@ -10,6 +10,8 @@ class GildedRose
     end
   end
 
+  private
+
   def item_check_and_increment(item)
     if item.name != "Sulfuras, Hand of Ragnaros"                                #does nothing if legendary
       if item.name == "Aged Brie"                                               #does brie stuff if brie
