@@ -1,5 +1,4 @@
 class Statement
-
   def initialize
     @transaction_list = []
   end

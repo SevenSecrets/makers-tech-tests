@@ -1,7 +1,6 @@
 require_relative 'statement.rb'
 
 class Account
-
   def initialize(statement = Statement.new)
     @credit = 0
     @debit = 0

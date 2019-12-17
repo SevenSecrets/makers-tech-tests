@@ -16,7 +16,7 @@ describe Account do
 
   it 'can have a statement object' do
     statement = Statement.new
-    expect(account = Account.new(statement)).to be_instance_of(Account)
+    expect(Account.new(statement)).to be_instance_of(Account)
   end
 
   it 'prints a statement correctly' do
