@@ -21,6 +21,7 @@ Before starting: Open irb with the `irb` command in terminal, then run `require 
 5. Changed names of methods and variables where necessary to improve readability
 6. Rewrote update_quality to be in three separate methods (item_check_and_increment, aged_brie_update, and backstage_passes_quality_update)
 7. Added more tests to improve coverage
+8. Extracted the actions for an ordinary item into their own separate method
 
 ###Notes:
 ```
