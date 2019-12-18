@@ -19,15 +19,19 @@ class GildedRose
       elsif item.name == "Backstage passes to a TAFKAL80ETC concert"            #does backstage stuff
         backstage_passes_quality_update(item)
       else
-        if item.quality > 0 &&
-          item.quality -= 1                                                     #reduces quality
-          if item.sell_in < 1 && item.quality > 0                               #reduces quality again
-            item.quality -= 1                                                   #if past sell_in day
-          end
-        end
+        normal_item_quality_update(item)
       end
     end
     item.sell_in -= 1
+  end
+
+  def normal_item_quality_update(item)
+    if item.quality > 0 &&
+      item.quality -= 1                                                         #reduces quality
+      if item.sell_in < 1 && item.quality > 0                                   #reduces quality again
+        item.quality -= 1                                                       #if past sell_in day
+      end
+    end
   end
 
   def aged_brie_quality_update(item)
