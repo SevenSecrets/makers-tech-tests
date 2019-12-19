@@ -8,7 +8,6 @@ class Game
     @player2 = player2
     @player_list = [@player1, @player2]
     @board = board
-    @board.populate_board
     @current_player = @player_list[0]
   end
 
@@ -31,5 +30,9 @@ class Game
     else
       current_player = @player_list[0]
     end
+  end
+
+  def check_if_won
+    @board.full_board
   end
 end

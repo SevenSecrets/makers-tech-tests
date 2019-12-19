@@ -4,6 +4,7 @@ class Board
 
   def initialize
     @full_board = []
+    populate_board
   end
 
   def populate_board
