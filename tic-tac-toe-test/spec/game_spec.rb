@@ -42,4 +42,30 @@ describe Game do
       expect(@game.turn(0, 1)).to eq "[x][o][]\n[][][]\n[][][]\n"
     end
   end
+
+  describe 'game over' do
+    before(:each) do
+      @game = Game.new
+    end
+
+    it 'is a draw' do
+      @game.turn(0, 0)
+      @game.turn(1, 0)
+      @game.turn(2, 0)
+      @game.turn(0, 1)
+      @game.turn(0, 2)
+      @game.turn(1, 1)
+      @game.turn(1, 2)
+      @game.turn(2, 2)
+      expect(@game.turn(2, 1)).to eq "GAME OVER -- DRAW"
+    end
+
+    it 'player 1 wins' do
+      @game.turn(0, 0)
+      @game.turn(1, 2)
+      @game.turn(0, 1)
+      @game.turn(1, 1)
+      expect(@game.turn(0, 2)).to eq "GAME OVER -- WIN"
+    end
+  end
 end
