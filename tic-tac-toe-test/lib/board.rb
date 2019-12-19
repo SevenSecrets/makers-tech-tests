@@ -15,6 +15,11 @@ class Board
   end
 
   def print_board
-    
+    printed_board = @full_board.map do |row|
+      row.each do |field|
+        field.print_field
+      end
+      "\n"
+    end
   end
 end

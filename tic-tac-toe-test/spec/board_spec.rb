@@ -16,8 +16,9 @@ describe Board do
 
   describe '#print_board' do
     it 'prints a full board' do
-      board = Board.new.populate_board
-      expect(board.print_board).to eq 
+      board = Board.new
+      board.populate_board
+      expect(board.print_board).to eq "[][][]\n[][][]\n[][][]"
     end
   end
 
