@@ -16,10 +16,12 @@ class Board
 
   def print_board
     printed_board = @full_board.map do |row|
-      row.each do |field|
+      printed_row = row.map do |field|
         field.print_field
       end
-      "\n"
+      printed_row << "\n"
+      printed_row.join("")
     end
+    printed_board.join("")
   end
 end

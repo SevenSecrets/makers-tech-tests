@@ -18,7 +18,7 @@ describe Board do
     it 'prints a full board' do
       board = Board.new
       board.populate_board
-      expect(board.print_board).to eq "[][][]\n[][][]\n[][][]"
+      expect(board.print_board).to eq "[][][]\n[][][]\n[][][]\n"
     end
   end
 

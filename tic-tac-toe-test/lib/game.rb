@@ -7,5 +7,10 @@ class Game
     @player1 = player1
     @player2 = player2
     @board = board
+    @board.populate_board
+  end
+
+  def print_gamestate
+    @board.print_board
   end
 end
