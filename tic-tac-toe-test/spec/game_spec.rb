@@ -67,5 +67,13 @@ describe Game do
       @game.turn(1, 1)
       expect(@game.turn(0, 2)).to eq "GAME OVER -- WIN"
     end
+
+    it 'player 1 wins with vertical' do
+      @game.turn(0, 0)
+      @game.turn(0, 1)
+      @game.turn(1, 0)
+      @game.turn(0, 2)
+      expect(@game.turn(2, 0)).to eq "GAME OVER -- WIN"
+    end
   end
 end

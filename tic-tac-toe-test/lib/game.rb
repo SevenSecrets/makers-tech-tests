@@ -3,6 +3,10 @@ require_relative 'field'
 require_relative 'board'
 
 class Game
+
+  WIN_STATES = [
+    [],
+  ]
   def initialize(player1 = Player.new('x'), player2 = Player.new('o'), board = Board.new)
     @player1 = player1
     @player2 = player2
@@ -40,18 +44,27 @@ class Game
   end
 
   def check_if_game_over
+    if check_if_draw
+      return true
+    elsif check_if_win
+      return true
+    end
+    return false
+  end
+
+  def check_if_draw
     if @turn_counter == 9
       puts "GAME OVER -- DRAW"
       @result = "DRAW"
       return true
-    else
-      full_board = @board.print_board.split("\n")
-      full_board.each do |row|
-        if row == "[x][x][x]" || row == "[o][o][o]"
-          @result = "WIN"
-          return true
-        end 
-      end
+    end
+    return false
+  end
+
+  def check_if_win
+    p gamestate = print_gamestate.split("\n")
+    if WIN_STATES.include? gamestate
+      return true
     end
     return false
   end
