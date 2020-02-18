@@ -40,5 +40,13 @@ describe 'fizzbuzz tests' do
       expect(@fizzbuzz.play_full(3)).not_to include 3
       expect(@fizzbuzz.play_full(3)).to include 'fizz'
     end
+
+    it 'prints buzz for 5' do
+      expect(@fizzbuzz.play_full(5)).to include 'buzz'
+    end
+
+    it 'prints fizzbuzz for 15' do
+      expect(@fizzbuzz.play_full(15)).to include 'fizzbuzz'
+    end
   end
 end
